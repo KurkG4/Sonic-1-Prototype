@@ -987,7 +987,7 @@ loc_11CC:
 
 loc_11D2:
 		move.b	#$10,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		btst	#6,(padPress1).w
 		beq.s	loc_11EE
 		move.b	#4,(GameMode).w
@@ -1915,12 +1915,12 @@ locret_1848:
 locret_184A:
 		rts	
 ; ---------------------------------------------------------------------------
-word_184C:	incbin "unknown/0184C.pal"
-word_186C:	incbin "unknown/0186C.pal"
-word_188C:	incbin "unknown/0188C.pal"
-word_18F4:	incbin "unknown/018F4.pal"
-word_1918:	incbin "unknown/01918.pal"
-word_1938:	incbin "unknown/01938.pal"
+word_184C:	incbin "unknown/0184C.pal" ;
+word_186C:	incbin "unknown/0186C.pal" ;
+word_188C:	incbin "unknown/0188C.pal" ;
+word_18F4:	incbin "unknown/018F4.pal" ;
+word_1918:	incbin "unknown/01918.pal" ;
+word_1938:	incbin "unknown/01938.pal" ;
 ; =============== S U B R O U T I N E =======================================
 
 
@@ -1947,7 +1947,7 @@ loc_1968:
 
 loc_1972:
 		move.b	#$12,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.s	sub_1988
 		bsr.w	ProcessPLC
 		dbf	d4,loc_1972
@@ -2019,7 +2019,7 @@ sub_19D2:
 
 loc_19DC:
 		move.b	#$12,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.s	sub_19F2
 		bsr.w	ProcessPLC
 		dbf	d4,loc_19DC
@@ -2089,7 +2089,7 @@ sub_1A3A:
 		move.w	(word_FFF632).w,d0
 		bmi.s	locret_1A68
 		subq.w	#2,(word_FFF632).w
-		lea	(word_1A6A).l,a0
+		lea	(Pal_SegaCyc).l,a0
 		lea	(unk_FFFB04).w,a1
 		adda.w	d0,a0
 		move.l	(a0)+,(a1)+
@@ -2104,7 +2104,7 @@ locret_1A68:
 ; End of function sub_1A3A
 
 ; ---------------------------------------------------------------------------
-word_1A6A:	incbin "unknown/01A6A.pal"
+Pal_SegaCyc:	incbin "unknown/01A6A.pal"        ;sega screen palcycle
 ; =============== S U B R O U T I N E =======================================
 
 
@@ -2142,53 +2142,53 @@ loc_1AD4:
 ; End of function sub_1AC4
 
 ; ---------------------------------------------------------------------------
-off_1ADC:	dc.l word_1B3C
+off_1ADC:	dc.l Pal_Sega
 		dc.w $FB00, $1F
-		dc.l word_1BBC
+		dc.l Pal_Title
 		dc.w $FB00, $1F
-		dc.l word_1C3C
+		dc.l Pal_LevelSel
 		dc.w $FB00, $1F
-		dc.l word_1CBC
+		dc.l Pal_Sonic
 		dc.w $FB00, 7
-		dc.l word_1CDC
+		dc.l Pal_GHZ
 		dc.w $FB20, $17
-		dc.l word_1D3C
+		dc.l Pal_LZ
 		dc.w $FB20, $17
-		dc.l word_1E1C
+		dc.l Pal_SLZ
 		dc.w $FB20, $17
-		dc.l word_1E7C
+		dc.l Pal_SYZ
 		dc.w $FB20, $17
-		dc.l word_1EDC
+		dc.l Pal_SBZ
 		dc.w $FB20, $17
-		dc.l word_1F3C
+		dc.l Pal_Special
 		dc.w $FB20, $17
-		dc.l word_1F9C
+		dc.l Pal_NGHZ
 		dc.w $FB00, $1F
-		dc.l word_1D9C
+		dc.l Pal_MZ
 		dc.w $FB00, $1F
-word_1B3C:	incbin "unknown/01B3C.pal"
-word_1BBC:	incbin "unknown/01BBC.pal"
-word_1C3C:	incbin "unknown/01C3C.pal"
-word_1CBC:	incbin "unknown/01CBC.pal"
-word_1CDC:	incbin "unknown/01CDC.pal"
-word_1D3C:	incbin "unknown/01D3C.pal"
-word_1D9C:	incbin "unknown/01D9C.pal"
-word_1E1C:	incbin "unknown/01E1C.pal"
-word_1E7C:	incbin "unknown/01E7C.pal"
-word_1EDC:	incbin "unknown/01EDC.pal"
-word_1F3C:	incbin "unknown/01F3C.pal"
-word_1F9C:	incbin "unknown/01F9C.pal"
+Pal_Sega:	incbin "unknown/01B3C.pal" ;sega screen bg
+Pal_Title:	incbin "unknown/01BBC.pal" ;title
+Pal_LevelSel:	incbin "unknown/01C3C.pal" ;levsel
+Pal_Sonic:	incbin "unknown/01CBC.pal" ;sonic
+Pal_GHZ:	incbin "unknown/01CDC.pal" ;ghz
+Pal_LZ:		incbin "unknown/01D3C.pal" ;lz
+Pal_MZ:		incbin "unknown/01D9C.pal" ;mz
+Pal_SLZ:	incbin "unknown/01E1C.pal" ;slz
+Pal_SYZ:	incbin "unknown/01E7C.pal" ;syz
+Pal_SBZ:	incbin "unknown/01EDC.pal" ;sbz
+Pal_Special:	incbin "unknown/01F3C.pal" ;specialstage
+Pal_NGHZ:	incbin "unknown/01F9C.pal" ;nightghz
 ; =============== S U B R O U T I N E =======================================
 
 
-vsync:
+VSync:
 		move	#$2300,sr
 
 loc_2020:
 		tst.b	(VintRoutine).w
 		bne.s	loc_2020
 		rts	
-; End of function vsync
+; End of function VSync
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -2222,14 +2222,14 @@ GetSine:
 		andi.w	#$FF,d0
 		add.w	d0,d0
 		addi.w	#$80,d0
-		move.w	word_2066(pc,d0.w),d1
+		move.w	Sine_Data(pc,d0.w),d1
 		subi.w	#$80,d0
-		move.w	word_2066(pc,d0.w),d0
+		move.w	Sine_Data(pc,d0.w),d0
 		rts	
 ; End of function GetSine
 
 ; ---------------------------------------------------------------------------
-word_2066:	incbin "unsorted/sinetable.dat"
+Sine_Data:	incbin "unsorted/sinetable.dat"
 ; ---------------------------------------------------------------------------
 		movem.l	d1-d2,-(sp)
 		move.w	d0,d1
@@ -2286,7 +2286,7 @@ loc_233E:
 		lsl.l	#8,d4
 		divu.w	d3,d4
 		moveq	#0,d0
-		move.b	byte_2382(pc,d4.w),d0
+		move.b	Angle_Data(pc,d4.w),d0
 		bra.s	loc_235A
 ; ---------------------------------------------------------------------------
 
@@ -2294,7 +2294,7 @@ loc_2350:
 		lsl.l	#8,d3
 		divu.w	d4,d3
 		moveq	#$40,d0
-		sub.b	byte_2382(pc,d3.w),d0
+		sub.b	Angle_Data(pc,d3.w),d0
 
 loc_235A:
 		tst.w	d1
@@ -2320,7 +2320,7 @@ loc_2378:
 ; End of function GetAngle
 
 ; ---------------------------------------------------------------------------
-byte_2382:	incbin "unsorted/angletable.dat"
+Angle_Data:	incbin "unsorted/angletable.dat"
 ; ---------------------------------------------------------------------------
 
 sSega:
@@ -2364,7 +2364,7 @@ loc_24BC:
 
 loc_2528:
 		move.b	#2,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	sub_1A3A
 		tst.w	(word_FFF614).w
 		beq.s	loc_2544
@@ -2461,7 +2461,7 @@ loc_262E:
 
 loc_26AE:
 		move.b	#4,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	RunObjects
 		bsr.w	sub_3DF6
 		bsr.w	ProcessMaps
@@ -2505,7 +2505,7 @@ loc_2732:
 
 loc_273C:
 		move.b	#4,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	sub_28A6
 		bsr.w	ProcessPLC
 		tst.l	(PLCList).w
@@ -2567,7 +2567,7 @@ loc_27F8:
 
 loc_27FE:
 		move.b	#4,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	sub_3DF6
 		bsr.w	sub_1732
 		bsr.w	ProcessPLC
@@ -2880,7 +2880,7 @@ loc_2C6C:
 
 loc_2C92:
 		move.b	#$C,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	RunObjects
 		bsr.w	ProcessMaps
 		bsr.w	ProcessPLC
@@ -2962,7 +2962,7 @@ loc_2D54:
 		subq.b	#1,(byte_FFF792).w
 		move.w	#$708,(word_FFF614).w
 		move.b	#8,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		move.w	#$202F,(word_FFF626).w
 		bsr.w	sub_1956
 		addq.b	#2,(ObjectsList+$A4).w
@@ -2973,7 +2973,7 @@ loc_2D54:
 sLevelLoop:
 		bsr.w	PauseGame
 		move.b	#8,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		addq.w	#1,(LevelFrames).w
 		bsr.w	sub_3048
 		bsr.w	DemoPlayback
@@ -3026,7 +3026,7 @@ loc_2E92:
 
 loc_2E9E:
 		move.b	#8,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	DemoPlayback
 		bsr.w	RunObjects
 		bsr.w	ProcessMaps
@@ -3672,7 +3672,7 @@ loc_3584:
 loc_3620:
 		bsr.w	PauseGame
 		move.b	#$A,(VintRoutine).w
-		bsr.w	vsync
+		bsr.w	VSync
 		bsr.w	DemoPlayback
 		move.w	(padHeld1).w,(padHeldPlayer).w
 		bsr.w	RunObjects
