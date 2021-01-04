@@ -430,7 +430,7 @@ loc_B3C:
 
 loc_B58:
 		addq.l	#1,(unk_FFFE0C).w
-		jsr	SoundSource
+		jsr	UpdateSoundDriver
 		movem.l	(sp)+,d0-a6
 		rte	
 
@@ -28133,14 +28133,14 @@ word_72D12:	incbin "levels/SBZ/Objects 2.unc"
 word_72D18:	incbin "levels/SBZ/Objects 3.unc"
 ObjListNull:	dc.w $FFFF, 0, 0
 		dcb.b $12DC,$FF
-mSoundPriorities:dc.l mSoundPrioList
+Go_SoundTypes:dc.l mSoundPrioList
 mSpecialSFXPtr:	dc.l mSpecialSFXList
-mMusicPtr:	dc.l mMusicList
+Go_MusicIndex:	dc.l mMusicList
 mSFXPtr:	dc.l mSFXList
 off_74010:	dc.l byte_74110
 mVolEnvPtr:	dc.l mVolEnvList
 		dc.l $A0
-		dc.l SoundSource
+		dc.l UpdateSoundDriver
 mSpeedTempos:	dc.l mSpeedTempoList
 mVolEnvList:	dc.l byte_74048, byte_7405F, byte_74066, byte_74077, byte_74091
 		dc.l byte_74082, byte_740BB, byte_740D7, byte_740FF
@@ -28171,10 +28171,10 @@ mSoundPrioList:	dcb.b $1F,$80
 		dc.b 0
 
 ; =============== S U B R O U T I N E =======================================
+;I swear to god stop calling SMPS Sound Source it's stupid.
 
-
-SoundSource:
-; SoundSource+2E?j
+UpdateSoundDriver:
+; UpdateSoundDriver+2E?j
 
 
 
@@ -28185,26 +28185,26 @@ loc_741DA:
 		btst	#0,($A11100).l
 		bne.s	loc_741DA
 		btst	#7,($A01FFD).l
-		beq.s	loc_74202
+		beq.s	Driver_Input
 		move.w	#0,($A11100).l
 		nop	
 		nop	
 		nop	
 		nop	
 		nop	
-		bra.s	SoundSource
+		bra.s	UpdateSoundDriver
 ; ---------------------------------------------------------------------------
 
-loc_74202:
+Driver_Input:
 		lea	((SoundMemory)&$FFFFFF).l,a6
 		clr.b	$E(a6)
 		tst.b	3(a6)
 		bne.w	loc_745C6
 		subq.b	#1,1(a6)
-		bne.s	loc_7421E
+		bne.s	Skip_Delay
 		jsr	sub_74D60(pc)
 
-loc_7421E:
+Skip_Delay:
 		move.b	4(a6),d0
 		beq.s	loc_74228
 		jsr	sub_74C3C(pc)
@@ -28217,13 +28217,13 @@ loc_74228:
 loc_74232:
 		tst.w	$A(a6)
 		beq.s	loc_7423C
-		jsr	sub_74678(pc)
+		jsr	Sound_Play(pc)
 
 loc_7423C:
 		lea	$40(a6),a5
 		tst.b	(a5)
 		bpl.s	loc_74248
-		jsr	sub_742C2(pc)
+		jsr	UpdateDACTrack(pc)
 
 loc_74248:
 		clr.b	8(a6)
@@ -28233,7 +28233,7 @@ loc_7424E:
 		adda.w	#$30,a5
 		tst.b	(a5)
 		bpl.s	loc_7425A
-		jsr	sub_74350(pc)
+		jsr	UpdateFMTrack(pc)
 
 loc_7425A:
 		dbf	d7,loc_7424E
@@ -28254,7 +28254,7 @@ loc_74278:
 		adda.w	#$30,a5
 		tst.b	(a5)
 		bpl.s	loc_74284
-		jsr	sub_74350(pc)
+		jsr	UpdateFMTrack(pc)
 
 loc_74284:
 		dbf	d7,loc_74278
@@ -28272,7 +28272,7 @@ loc_74296:
 		adda.w	#$30,a5
 		tst.b	(a5)
 		bpl.s	loc_742AC
-		jsr	sub_74350(pc)
+		jsr	UpdateFMTrack(pc)
 
 loc_742AC:
 		adda.w	#$30,a5
@@ -28281,16 +28281,16 @@ loc_742AC:
 		jsr	sub_74F5C(pc)
 
 loc_742B8:
-; SoundSource+434?j ...
+; UpdateSoundDriver+434?j ...
 		move.w	#0,($A11100).l
 		rts	
-; End of function SoundSource
+; End of function UpdateSoundDriver
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_742C2:
+UpdateDACTrack:
 		subq.b	#1,$E(a5)
 		bne.s	locret_74326
 		move.b	#$80,8(a6)
@@ -28347,7 +28347,7 @@ loc_74328:
 
 locret_74346:
 		rts	
-; End of function sub_742C2
+; End of function UpdateDACTrack
 
 ; ---------------------------------------------------------------------------
 byte_74348:	dc.b $12, $15, $1C, $1D, $FF, $FF, $FF, $FF
@@ -28355,31 +28355,31 @@ byte_74348:	dc.b $12, $15, $1C, $1D, $FF, $FF, $FF, $FF
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_74350:
-; SoundSource+AE?p ...
+UpdateFMTrack:
+
 
 
 
 		subq.b	#1,$E(a5)
 		bne.s	loc_7436A
 		bclr	#4,(a5)
-		jsr	sub_74376(pc)
-		jsr	sub_744A2(pc)
+		jsr	ProcessFMTrack(pc)
+		jsr	SendFMFreq(pc)
 		jsr	loc_74518(pc)
 		bra.w	loc_74E10
 ; ---------------------------------------------------------------------------
 
 loc_7436A:
-		jsr	sub_74428(pc)
-		jsr	sub_74450(pc)
-		bra.w	loc_744AE
-; End of function sub_74350
+		jsr	DoNoteStop(pc)
+		jsr	DoModulation(pc)
+		bra.w	RefreshFMFreq
+; End of function UpdateFMTrack
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_74376:
+ProcessFMTrack:
 		movea.l	4(a5),a4
 		bclr	#1,(a5)
 
@@ -28396,23 +28396,23 @@ loc_7438E:
 		jsr	sub_74E2C(pc)
 		tst.b	d5
 		bpl.s	loc_743A4
-		jsr	sub_743AC(pc)
+		jsr	GetFMFreq(pc)
 		move.b	(a4)+,d5
 		bpl.s	loc_743A4
 		subq.w	#1,a4
-		bra.w	sub_743EA
+		bra.w	FinishTrkUpdate
 ; ---------------------------------------------------------------------------
 
 loc_743A4:
 		jsr	sub_743CA(pc)
-		bra.w	sub_743EA
-; End of function sub_74376
+		bra.w	FinishTrkUpdate
+; End of function ProcessFMTrack
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_743AC:
+GetFMFreq:
 
 
 		subi.b	#$80,d5
@@ -28424,7 +28424,7 @@ sub_743AC:
 		move.w	(a0,d5.w),d6
 		move.w	d6,$10(a5)
 		rts	
-; End of function sub_743AC
+; End of function GetFMFreq
 
 
 ; =============== S U B R O U T I N E =======================================
@@ -28448,17 +28448,17 @@ loc_743D8:
 ; End of function sub_743CA
 
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR sub_743AC
+; START OF FUNCTION CHUNK FOR GetFMFreq
 
 loc_743E2:
 		bset	#1,(a5)
 		clr.w	$10(a5)
-; END OF FUNCTION CHUNK FOR sub_743AC
+; END OF FUNCTION CHUNK FOR GetFMFreq
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_743EA:
+FinishTrkUpdate:
 		move.l	a4,4(a5)
 		move.b	$F(a5),$E(a5)
 		btst	#4,(a5)
@@ -28478,13 +28478,13 @@ sub_743EA:
 
 locret_74426:
 		rts	
-; End of function sub_743EA
+; End of function FinishTrkUpdate
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_74428:
+DoNoteStop:
 		tst.b	$12(a5)
 		beq.s	locret_7444E
 		subq.b	#1,$12(a5)
@@ -28503,13 +28503,13 @@ loc_74448:
 
 locret_7444E:
 		rts	
-; End of function sub_74428
+; End of function DoNoteStop
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_74450:
+DoModulation:
 		addq.w	#4,sp
 		btst	#3,(a5)
 		beq.s	locret_744A0
@@ -28546,19 +28546,19 @@ loc_74488:
 
 locret_744A0:
 		rts	
-; End of function sub_74450
+; End of function DoModulation
 
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_744A2:
+SendFMFreq:
 		btst	#1,(a5)
 		bne.s	locret_744E0
 		move.w	$10(a5),d6
 		beq.s	loc_744E2
 
-loc_744AE:
+RefreshFMFreq:
 		move.b	$1E(a5),d0
 		ext.w	d0
 		add.w	d0,d6
@@ -28605,7 +28605,7 @@ loc_744F2:
 		jsr	sub_74E5C(pc)
 		dbf	d7,loc_744F2
 		rts	
-; End of function sub_744A2
+; End of function SendFMFreq
 
 ; ---------------------------------------------------------------------------
 byte_74510:	dc.b $AD, $A9, $AC, $A8, $AE, $AA, $A6, $A2
@@ -28691,7 +28691,7 @@ byte_745BC:	dc.b $40, $80
 byte_745BE:	dc.b $40, $C0, $80
 byte_745C1:	dc.b $C0, $80, $C0, $40, 0
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR SoundSource
+; START OF FUNCTION CHUNK FOR UpdateSoundDriver
 
 loc_745C6:
 		bmi.s	loc_7460A
@@ -28736,7 +28736,7 @@ loc_74616:
 		jsr	sub_74E50(pc)
 
 loc_7462E:
-; SoundSource+44E?j
+; UpdateSoundDriver+44E?j
 		adda.w	d3,a5
 		dbf	d4,loc_74616
 		lea	$220(a6),a5
@@ -28752,7 +28752,7 @@ loc_7463A:
 		jsr	sub_74E50(pc)
 
 loc_74652:
-; SoundSource+472?j
+; UpdateSoundDriver+472?j
 		adda.w	d3,a5
 		dbf	d4,loc_7463A
 		lea	$340(a6),a5
@@ -28765,17 +28765,17 @@ loc_74652:
 		jsr	sub_74E50(pc)
 
 loc_74674:
-; SoundSource+48E?j ...
+; UpdateSoundDriver+48E?j ...
 		bra.w	loc_742B8
-; END OF FUNCTION CHUNK FOR SoundSource
+; END OF FUNCTION CHUNK FOR UpdateSoundDriver
 
 ; =============== S U B R O U T I N E =======================================
 
 
-sub_74678:
+Sound_Play:
 
 
-		movea.l	(mSoundPriorities).l,a0
+		movea.l	(Go_SoundTypes).l,a0
 		lea	$A(a6),a1
 		move.b	0(a6),d3
 		moveq	#2,d4
@@ -28807,11 +28807,11 @@ loc_746B2:
 		beq.s	locret_746FC
 		bcs.w	loc_74CFE
 		cmpi.b	#$9F,d7
-		bls.w	loc_74730
+		bls.w	Sound_81to9F
 		cmpi.b	#$A0,d7
 		bcs.w	locret_746FC
 		cmpi.b	#$CF,d7
-		bls.w	loc_74920
+		bls.w	Sound_A0toCF
 		cmpi.b	#$D0,d7
 		bcs.w	locret_746FC
 		cmpi.b	#$D7,d7
@@ -28819,19 +28819,19 @@ loc_746B2:
 		cmpi.b	#$E0,d7
 		bcs.s	loc_7471C
 		cmpi.b	#$E5,d7
-		bls.s	loc_746FE
+		bls.s	Sound_E0toE4
 
 locret_746FC:
-		rts	
+		rts
 ; ---------------------------------------------------------------------------
 
-loc_746FE:
+Sound_E0toE4:
 		subi.b	#$E0,d7
 		lsl.w	#2,d7
-		jmp	loc_74708(pc,d7.w)
+		jmp	Sound_ExIndex(pc,d7.w)
 ; ---------------------------------------------------------------------------
 
-loc_74708:
+Sound_ExIndex:
 		bra.w	loc_74C1E
 ; ---------------------------------------------------------------------------
 		bra.w	sub_74B10
@@ -28853,7 +28853,7 @@ loc_7471C:
 		rts	
 ; ---------------------------------------------------------------------------
 
-loc_74730:
+Sound_81to9F:
 		cmpi.b	#$88,d7
 		bne.s	loc_7477E
 		tst.b	$27(a6)
@@ -28893,7 +28893,7 @@ loc_74786:
 		movea.l	(mSpeedTempos).l,a4
 		subi.b	#$81,d7
 		move.b	(a4,d7.w),$29(a6)
-		movea.l	(mMusicPtr).l,a4
+		movea.l	(Go_MusicIndex).l,a4
 		lsl.w	#2,d7
 		movea.l	(a4,d7.w),a4
 		moveq	#0,d0
@@ -29047,7 +29047,7 @@ byte_74914:	dc.b 6, 0, 1, 2, 4, 5, 6, 0
 byte_7491C:	dc.b $80, $A0, $C0, 0
 ; ---------------------------------------------------------------------------
 
-loc_74920:
+Sound_A0toCF:
 		tst.b	$27(a6)
 		bne.w	locret_74A0A
 		cmpi.b	#$B5,d7
@@ -29215,7 +29215,7 @@ loc_74AD6:
 
 locret_74AF6:
 		rts	
-; End of function sub_74678
+; End of function Sound_Play
 
 ; ---------------------------------------------------------------------------
 		dc.l (SoundMemory+$100)&$FFFFFF, (SoundMemory+$1F0)&$FFFFFF, (SoundMemory+$250)&$FFFFFF
@@ -29333,7 +29333,7 @@ locret_74C1C:
 ; End of function sub_74BB4
 
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR sub_74678
+; START OF FUNCTION CHUNK FOR Sound_Play
 
 loc_74C1E:
 		jsr	sub_74B10(pc)
@@ -29343,7 +29343,7 @@ loc_74C1E:
 		clr.b	$40(a6)
 		clr.b	$2A(a6)
 		rts	
-; END OF FUNCTION CHUNK FOR sub_74678
+; END OF FUNCTION CHUNK FOR Sound_Play
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -29459,7 +29459,7 @@ loc_74CE6:
 ; End of function sub_74CCA
 
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR sub_74678
+; START OF FUNCTION CHUNK FOR Sound_Play
 ;   ADDITIONAL PARENT FUNCTION sub_74C3C
 
 loc_74CFE:
@@ -29478,7 +29478,7 @@ loc_74D16:
 		move.b	#$80,9(a6)
 		jsr	sub_74CCA(pc)
 		bra.w	sub_750E0
-; END OF FUNCTION CHUNK FOR sub_74678
+; END OF FUNCTION CHUNK FOR Sound_Play
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -29522,7 +29522,7 @@ sub_74D60:
 ; End of function sub_74D60
 
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR sub_74678
+; START OF FUNCTION CHUNK FOR Sound_Play
 
 loc_74D90:
 		move.b	$29(a6),2(a6)
@@ -29536,7 +29536,7 @@ loc_74DA4:
 		move.b	$28(a6),1(a6)
 		clr.b	$2A(a6)
 		rts	
-; END OF FUNCTION CHUNK FOR sub_74678
+; END OF FUNCTION CHUNK FOR Sound_Play
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -29586,7 +29586,7 @@ loc_74E04:
 ; End of function sub_74DB6
 
 ; ---------------------------------------------------------------------------
-; START OF FUNCTION CHUNK FOR sub_74350
+; START OF FUNCTION CHUNK FOR UpdateFMTrack
 
 loc_74E10:
 		btst	#1,(a5)
@@ -29601,7 +29601,7 @@ loc_74E10:
 
 locret_74E2A:
 		rts	
-; END OF FUNCTION CHUNK FOR sub_74350
+; END OF FUNCTION CHUNK FOR UpdateFMTrack
 
 ; =============== S U B R O U T I N E =======================================
 
@@ -29711,7 +29711,7 @@ word_74E9C:	dc.w $25E, $284, $2AB, $2D3, $2FE, $32D, $35C, $38F, $3C5
 
 
 sub_74F5C:
-; SoundSource+C0?p ...
+; UpdateSoundDriver+C0?p ...
 		subq.b	#1,$E(a5)
 		bne.s	loc_74F72
 		bclr	#4,(a5)
@@ -29721,9 +29721,9 @@ sub_74F5C:
 ; ---------------------------------------------------------------------------
 
 loc_74F72:
-		jsr	sub_74428(pc)
+		jsr	DoNoteStop(pc)
 		jsr	sub_75032(pc)
-		jsr	sub_74450(pc)
+		jsr	DoModulation(pc)
 		jsr	sub_74FEE(pc)
 		rts	
 ; End of function sub_74F5C
@@ -29753,12 +29753,12 @@ loc_74F9C:
 		tst.b	d5
 		bpl.s	loc_74FB0
 		subq.w	#1,a4
-		bra.w	sub_743EA
+		bra.w	FinishTrkUpdate
 ; ---------------------------------------------------------------------------
 
 loc_74FB0:
 		jsr	sub_743CA(pc)
-		bra.w	sub_743EA
+		bra.w	FinishTrkUpdate
 ; End of function sub_74F84
 
 
@@ -29773,13 +29773,13 @@ sub_74FB8:
 		lsl.w	#1,d5
 		lea	word_750F8(pc),a0
 		move.w	(a0,d5.w),$10(a5)
-		bra.w	sub_743EA
+		bra.w	FinishTrkUpdate
 ; ---------------------------------------------------------------------------
 
 loc_74FD6:
 		bset	#1,(a5)
 		move.w	#$FFFF,$10(a5)
-		jsr	sub_743EA(pc)
+		jsr	FinishTrkUpdate(pc)
 		bra.w	sub_750CA
 ; End of function sub_74FB8
 
