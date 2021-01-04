@@ -1,1 +1,1 @@
-"tools/VBinDiff.exe" "tools/s1proto.md" "out.md"
+"tools/VBinDiff.exe" "tools/s1proto.md" "s1built.bin"
