@@ -24,7 +24,6 @@
 ; segment "ROM"
   	       include "ram.asm"
 ROM		section org(0)
-			opt ae-		; temporary!!!
 off_0:		dc.l (StackPointer)&$FFFFFF, GameInit, loc_3D0, loc_3D8
 		dc.l loc_3E0, loc_3EC, loc_3F4, loc_3FC, loc_404, loc_40C
 		dc.l loc_414, loc_420, loc_42C, loc_42C, loc_42C, loc_42C
@@ -42,12 +41,12 @@ off_0:		dc.l (StackPointer)&$FFFFFF, GameInit, loc_3D0, loc_3D8
 		dc.b '                                                '	; Domestic title
 		dc.b '                                                '	; Overseas title
 		dc.b 'GM 00000000-00'	; Serial code
-word_18E:	dc.w 0	; Checksum
-		dc.b 'J               '	; I/O support
+word_18E:	dc.w 0			; Checksum
+		dc.b 'J               '	; I/O support (Joypad)
 dword_1A0:	dc.l 0, $7FFFF		; ROM start/end
 		dc.l $FF0000, $FFFFFF	; RAM start/end
 		dc.b '                                                               '	; Notes
-		dc.b ' '	; SRAM
+		dc.b ' '		; SRAM support (none)
 		dc.b 'JU              '	; Region code (Japan/US)
 ; ---------------------------------------------------------------------------
 
@@ -59,7 +58,6 @@ ErrorTrap:
 
 GameInit:
 		tst.l	($A10008).l
-
 loc_20C:
 		bne.w	loc_306
 		tst.w	($A1000C).l
@@ -141,7 +139,7 @@ loc_306:
 		btst	#6,($A1000D).l
 		beq.s	CheckChecksum
 		cmpi.l	#'init',(unk_FFFFFC).w	; is the checksum routine done?
-		beq.w	loc_36A			; if so, initalize the game
+		beq.w	InitalizeGame		; if so, initalize the game
 
 CheckChecksum:
 		movea.l	#ErrorTrap,a0
@@ -155,7 +153,7 @@ loc_32C:
 		bcc.s	loc_32C
 		movea.l	#word_18E,a1
 		cmp.w	(a1),d1
-		nop	
+		nop
 		nop	
 		lea	(StackPointer).w,a6
 		moveq	#0,d7
@@ -170,27 +168,27 @@ loc_348:
 		move.w	#1,(word_FFFFE0).w
 		move.l	#'init',(unk_FFFFFC).w
 
-loc_36A:
+InitalizeGame:
 		lea	((Chunks)&$FFFFFF).l,a6
 		moveq	#0,d7
 		move.w	#$3F7F,d6
 
-loc_376:
+ClrRAMLoop:
 		move.l	d7,(a6)+
-		dbf	d6,loc_376
+		dbf	d6,ClrRAMLoop
 		bsr.w	sub_100A
 		bsr.w	LoadZ80
 		bsr.w	padInit
 		move.b	#0,(GameMode).w
 
-loc_38E:
+GameLoop:
 		move.b	(GameMode).w,d0
 		andi.w	#$1C,d0
-		jsr	loc_39C(pc,d0.w)
-		bra.s	loc_38E
+		jsr	GM_Array(pc,d0.w)
+		bra.s	GameLoop
 ; ---------------------------------------------------------------------------
 
-loc_39C:
+GM_Array:
 		bra.w	sSega
 ; ---------------------------------------------------------------------------
 		bra.w	sTitle
@@ -2447,7 +2445,7 @@ loc_262E:
 		bsr.w	palLoadFade
 		move.b	#$8A,d0
 		bsr.w	PlaySFX
-		move.b	#0,(word_FFFFFA).w
+		move.b	#0,(Debug_flag).w
 		move.w	#$178,(word_FFF614).w
 		move.b	#$E,(ObjectsList+$40).w
 		move.b	#$F,(ObjectsList+$80).w
@@ -2930,7 +2928,7 @@ loc_2D3A:
 		move.b	#$21,(ObjectsList+$40).w
 		btst	#6,(padHeld1).w
 		beq.s	loc_2D54
-		move.b	#1,(word_FFFFFA).w
+		move.b	#1,(Debug_flag).w
 
 loc_2D54:
 		move.w	#0,(padHeldPlayer).w
@@ -19476,7 +19474,7 @@ loc_E830:
 loc_E872:
 		andi.w	#$7FF,$C(a0)
 		andi.w	#$7FF,(dword_FFF704).w
-		tst.w	(word_FFFFFA).w
+		tst.w	(Debug_flag).w
 		beq.s	loc_E892
 		btst	#4,(padHeldPlayer+1).w
 		beq.s	loc_E892
@@ -21603,7 +21601,7 @@ loc_FD68:
 ; ---------------------------------------------------------------------------
 
 loc_FD72:
-		tst.w	(word_FFFFFA).w
+		tst.w	(Debug_flag).w
 		bne.s	loc_FD18
 
 loc_FD78:
@@ -24335,7 +24333,7 @@ locret_11678:
 
 
 UpdateHUD:
-		tst.w	(word_FFFFFA).w
+		tst.w	(Debug_flag).w
 		bne.w	loc_11746
 		tst.b	(byte_FFFE1F).w
 		beq.s	loc_1169A
@@ -25058,9 +25056,9 @@ sub_11FCE:
 ; End of function sub_11FCE
 
 ; ---------------------------------------------------------------------------
-DebugLists:	dc.w word_11FF6-DebugLists, word_12060-DebugLists, word_1207A-DebugLists, word_12104-DebugLists
-		dc.w word_1216E-DebugLists, word_121D8-DebugLists
-word_11FF6:	dc.w $D
+DebugLists:	dc.w DbgList_GHZ-DebugLists, DbgList_LZ-DebugLists, DbgList_MZ-DebugLists, DbgList_SLZ-DebugLists
+		dc.w DbgList_SYZ-DebugLists, DbgList_SBZ-DebugLists
+DbgList_GHZ:	dc.w $D
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor
@@ -25087,14 +25085,14 @@ word_11FF6:	dc.w $D
 		dc.b 0, 0, $43, $4C
 		dc.l ($19<<24)|MapRollingBall
 		dc.b 0, 0, $43, $AA
-word_12060:	dc.w 3
+DbgList_LZ:	dc.w 3
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor
 		dc.b 0, 0, 6, $80
 		dc.l ($1F<<24)|MapCrabmeat
 		dc.b 0, 0, 4, 0
-word_1207A:	dc.w $11
+DbgList_MZ:	dc.w $11
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor
@@ -25129,7 +25127,7 @@ word_1207A:	dc.w $11
 		dc.b 0, 0, $86, $80
 		dc.l ($55<<24)|MapBasaran
 		dc.b 0, 0, $24, $B8
-word_12104:	dc.w $D
+DbgList_SLZ:	dc.w $D
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor
@@ -25156,7 +25154,7 @@ word_12104:	dc.w $D
 		dc.b 0, 0, 4, 0
 		dc.l ($22<<24)|MapBuzzbomber
 		dc.b 0, 0, 4, $44
-word_1216E:	dc.w $D
+DbgList_SYZ:	dc.w $D
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor
@@ -25183,7 +25181,7 @@ word_1216E:	dc.w $D
 		dc.b 0, 0, $40, 0
 		dc.l ($32<<24)|MapSwitch
 		dc.b 0, 0, 5, $13
-word_121D8:	dc.w 3
+DbgList_SBZ:	dc.w 3
 		dc.l ($25<<24)|MapRing
 		dc.b 0, 0, $27, $B2
 		dc.l ($26<<24)|MapMonitor

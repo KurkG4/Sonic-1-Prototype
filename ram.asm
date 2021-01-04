@@ -41985,518 +41985,518 @@ unk_FF8000:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-Layout:		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
-		ds.b 4
+Layout:		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
+		ds.l 1
 unk_FFAC00:	ds.b 1
 ; ObjectDisplay2?o ...
 		ds.b 1
@@ -59910,7 +59910,7 @@ SoundMemory:	ds.b $600
 ; PlayMusic?w ...
 GameMode:	ds.b 1
 		ds.b 1
-padHeldPlayer:	ds.b 2
+padHeldPlayer:	ds.w 1
 padHeld1:	ds.b 1
 ; PauseGame:loc_11EE?r ...
 padPress1:	ds.b 1
@@ -59921,21 +59921,21 @@ padPress1:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF60C:	ds.b 2
+word_FFF60C:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF614:	ds.b 2
-dword_FFF616:	ds.b 4
-dword_FFF61A:	ds.b 4
-word_FFF61E:	ds.b 2
-word_FFF620:	ds.b 2
-word_FFF622:	ds.b 2
-word_FFF624:	ds.b 2
-word_FFF626:	ds.b 2
+word_FFF614:	ds.w 1
+dword_FFF616:	ds.l 1
+dword_FFF61A:	ds.l 1
+word_FFF61E:	ds.w 1
+word_FFF620:	ds.w 1
+word_FFF622:	ds.w 1
+word_FFF624:	ds.w 1
+word_FFF626:	ds.w 1
 byte_FFF628:	ds.b 1
 byte_FFF629:	ds.b 1
 VintRoutine:	ds.b 1
@@ -59946,11 +59946,11 @@ byte_FFF62C:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF632:	ds.b 2
-word_FFF634:	ds.b 2
-dword_FFF636:	ds.b 4
+word_FFF632:	ds.w 1
+word_FFF634:	ds.w 1
+dword_FFF636:	ds.l 1
 ; RandomNumber+20?w
-word_FFF63A:	ds.b 2
+word_FFF63A:	ds.w 1
 ; PauseGame:loc_11CC?w ...
 		ds.b 1
 		ds.b 1
@@ -59960,14 +59960,14 @@ word_FFF63A:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF644:	ds.b 2
+word_FFF644:	ds.w 1
 		ds.b 1
 		ds.b 1
-word_FFF648:	ds.b 2
+word_FFF648:	ds.w 1
 ; hint?r ...
 		ds.b 1
 		ds.b 1
-word_FFF64C:	ds.b 2
+word_FFF64C:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -59986,16 +59986,13 @@ word_FFF64C:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF660:	ds.b 2
-word_FFF662:	ds.b 2
+word_FFF660:	ds.w 1
+word_FFF662:	ds.w 1
 		ds.b 1
 		ds.b 1
-word_FFF666:	ds.b 2
-word_FFF668:	ds.b 2
-word_FFF66A:	ds.b 2
-		ds.b 1
-		ds.b 1
-		ds.b 1
+word_FFF666:	ds.w 1
+word_FFF668:	ds.w 1
+word_FFF66A:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -60013,9 +60010,12 @@ word_FFF66A:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-PLCList:	ds.b 4
+		ds.b 1
+		ds.b 1
+		ds.b 1
+PLCList:	ds.l 1
 ; LoadPLC2+16?o ...
-word_FFF684:	ds.b 2
+word_FFF684:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -60106,49 +60106,49 @@ word_FFF684:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-dword_FFF6E0:	ds.b 4
-dword_FFF6E4:	ds.b 4
-dword_FFF6E8:	ds.b 4
-dword_FFF6EC:	ds.b 4
-dword_FFF6F0:	ds.b 4
-dword_FFF6F4:	ds.b 4
-word_FFF6F8:	ds.b 2
+dword_FFF6E0:	ds.l 1
+dword_FFF6E4:	ds.l 1
+dword_FFF6E8:	ds.l 1
+dword_FFF6EC:	ds.l 1
+dword_FFF6F0:	ds.l 1
+dword_FFF6F4:	ds.l 1
+word_FFF6F8:	ds.w 1
 ; ProcessPLC+26?w ...
-word_FFF6FA:	ds.b 2
+word_FFF6FA:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-dword_FFF700:	ds.b 4
-dword_FFF704:	ds.b 4
+dword_FFF700:	ds.l 1
+dword_FFF704:	ds.l 1
 ; LoadLevelBounds:loc_3CB2?w ...
-dword_FFF708:	ds.b 4
-dword_FFF70C:	ds.b 4
-dword_FFF710:	ds.b 4
-word_FFF714:	ds.b 2
+dword_FFF708:	ds.l 1
+dword_FFF70C:	ds.l 1
+dword_FFF710:	ds.l 1
+word_FFF714:	ds.w 1
 		ds.b 1
 		ds.b 1
-dword_FFF718:	ds.b 4
-word_FFF71C:	ds.b 2
+dword_FFF718:	ds.l 1
+word_FFF71C:	ds.w 1
 		ds.b 1
 		ds.b 1
-dword_FFF720:	ds.b 4
-dword_FFF724:	ds.b 4
+dword_FFF720:	ds.l 1
+dword_FFF724:	ds.l 1
 ; LevelEvents+1C?w ...
-dword_FFF728:	ds.b 4
-dword_FFF72C:	ds.b 4
+dword_FFF728:	ds.l 1
+dword_FFF72C:	ds.l 1
 ; LoadLevelBounds+4E?r ...
-word_FFF730:	ds.b 2
-word_FFF732:	ds.b 2
+word_FFF730:	ds.w 1
+word_FFF732:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF73A:	ds.b 2
-word_FFF73C:	ds.b 2
-word_FFF73E:	ds.b 2
+word_FFF73A:	ds.w 1
+word_FFF73C:	ds.w 1
+word_FFF73E:	ds.w 1
 byte_FFF740:	ds.b 1
 ; LoadLevelBounds+3E?w ...
 byte_FFF741:	ds.b 1
@@ -60183,9 +60183,9 @@ byte_FFF75C:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-PlayerSpeed:	ds.b 2
-PlayerAcceleration:ds.b 2
-PlayerDeceleration:ds.b 2
+PlayerSpeed:	ds.w 1
+PlayerAcceleration:ds.w 1
+PlayerDeceleration:ds.w 1
 byte_FFF766:	ds.b 1
 ; ObjSonic_DynTiles+C?w
 byte_FFF767:	ds.b 1
@@ -60195,13 +60195,13 @@ byte_FFF76A:	ds.b 1
 		ds.b 1
 byte_FFF76C:	ds.b 1
 		ds.b 1
-word_FFF76E:	ds.b 2
-dword_FFF770:	ds.b 4
-dword_FFF774:	ds.b 4
-dword_FFF778:	ds.b 4
-dword_FFF77C:	ds.b 4
-word_FFF780:	ds.b 2
-word_FFF782:	ds.b 2
+word_FFF76E:	ds.w 1
+dword_FFF770:	ds.l 1
+dword_FFF774:	ds.l 1
+dword_FFF778:	ds.l 1
+dword_FFF77C:	ds.l 1
+word_FFF780:	ds.w 1
+word_FFF782:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -60214,25 +60214,25 @@ word_FFF782:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF790:	ds.b 2
+word_FFF790:	ds.w 1
 ; DemoPlayback+E?r ...
 byte_FFF792:	ds.b 1
 		ds.b 1
-word_FFF794:	ds.b 2
-dword_FFF796:	ds.b 4
-word_FFF79A:	ds.b 2
-word_FFF79C:	ds.b 2
-word_FFF79E:	ds.b 2
-word_FFF7A0:	ds.b 2
+word_FFF794:	ds.w 1
+dword_FFF796:	ds.l 1
+word_FFF79A:	ds.w 1
+word_FFF79C:	ds.w 1
+word_FFF79E:	ds.w 1
+word_FFF7A0:	ds.w 1
 		ds.b 1
 		ds.b 1
-word_FFF7A4:	ds.b 2
+word_FFF7A4:	ds.w 1
 		ds.b 1
 byte_FFF7A7:	ds.b 1
-word_FFF7A8:	ds.b 2
+word_FFF7A8:	ds.w 1
 byte_FFF7AA:	ds.b 1
 		ds.b 1
-dword_FFF7AC:	ds.b 4
+dword_FFF7AC:	ds.l 1
 ; ObjSonic_SpecialChunk+40?r ...
 byte_FFF7B0:	ds.b 1
 byte_FFF7B1:	ds.b 1
@@ -60282,7 +60282,7 @@ byte_FFF7B6:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFF7E0:	ds.b 2
+word_FFF7E0:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -60297,7 +60297,7 @@ word_FFF7E0:	ds.b 2
 		ds.b 1
 		ds.b 1
 byte_FFF7EF:	ds.b 1
-word_FFF7F0:	ds.b 2
+word_FFF7F0:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -61336,7 +61336,7 @@ unk_FFFB80:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-dword_FFFC00:	ds.b 4
+dword_FFFC00:	ds.l 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -61397,7 +61397,7 @@ dword_FFFC00:	ds.b 4
 		ds.b 1
 		ds.b 1
 		ds.b 1
-dword_FFFC40:	ds.b 4
+dword_FFFC40:	ds.l 1
 byte_FFFC44:	ds.b 1
 		ds.b 1
 		ds.b 1
@@ -61844,18 +61844,18 @@ byte_FFFC44:	ds.b 1
 		ds.b 1
 StackPointer:	ds.b 1
 		ds.b 1
-word_FFFE02:	ds.b 2
-LevelFrames:	ds.b 2
+word_FFFE02:	ds.w 1
+LevelFrames:	ds.w 1
 byte_FFFE06:	ds.b 1
 		ds.b 1
-DebugRoutine:	ds.b 2
+DebugRoutine:	ds.w 1
 byte_FFFE0A:	ds.b 1
 byte_FFFE0B:	ds.b 1
 unk_FFFE0C:	ds.b 1
 		ds.b 1
 		ds.b 1
 byte_FFFE0F:	ds.b 1
-level:		ds.b 2
+level:		ds.w 1
 Lives:		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -61873,9 +61873,9 @@ ExtraLifeFlags:	ds.b 1
 byte_FFFE1E:	ds.b 1
 byte_FFFE1F:	ds.b 1
 ; ScoreAdd?w ...
-Rings:		ds.b 2
-dword_FFFE22:	ds.b 4
-dword_FFFE26:	ds.b 4
+Rings:		ds.w 1
+dword_FFFE22:	ds.l 1
+dword_FFFE26:	ds.l 1
 		ds.b 1
 		ds.b 1
 byte_FFFE2C:	ds.b 1
@@ -61918,15 +61918,15 @@ unk_FFFE50:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFFE54:	ds.b 2
-word_FFFE56:	ds.b 2
+word_FFFE54:	ds.w 1
+word_FFFE56:	ds.w 1
 byte_FFFE58:	ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFFE5E:	ds.b 2
+word_FFFE5E:	ds.w 1
 byte_FFFE60:	ds.b 1
 		ds.b 1
 		ds.b 1
@@ -61969,16 +61969,16 @@ byte_FFFE84:	ds.b 1
 		ds.b 1
 byte_FFFE88:	ds.b 1
 		ds.b 1
-word_FFFE8A:	ds.b 2
+word_FFFE8A:	ds.w 1
 byte_FFFE8C:	ds.b 1
 		ds.b 1
-word_FFFE8E:	ds.b 2
+word_FFFE8E:	ds.w 1
 byte_FFFE90:	ds.b 1
 		ds.b 1
-word_FFFE92:	ds.b 2
+word_FFFE92:	ds.w 1
 byte_FFFE94:	ds.b 1
 		ds.b 1
-word_FFFE96:	ds.b 2
+word_FFFE96:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -62027,7 +62027,7 @@ byte_FFFEC4:	ds.b 1
 byte_FFFEC5:	ds.b 1
 byte_FFFEC6:	ds.b 1
 byte_FFFEC7:	ds.b 1
-word_FFFEC8:	ds.b 2
+word_FFFEC8:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
@@ -62306,29 +62306,29 @@ word_FFFEC8:	ds.b 2
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFFFE0:	ds.b 2
+word_FFFFE0:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFFFE8:	ds.b 2
+word_FFFFE8:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
-word_FFFFF0:	ds.b 2
-word_FFFFF2:	ds.b 2
+word_FFFFF0:	ds.w 1
+word_FFFFF2:	ds.w 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 		ds.b 1
 byte_FFFFF8:	ds.b 1
 		ds.b 1
-word_FFFFFA:	ds.b 2
+Debug_flag:	ds.w 1
 unk_FFFFFC:	ds.b 1
 		ds.b 1
 		ds.b 1
