@@ -1,0 +1,319 @@
+# disassemble debug text
+005EA unsorted/debugtext.unc
+00B0A
+
+# disassemble palette cycle data
+0184C unknown/00184C.pal
+0186C unknown/00186C.pal
+0188C unknown/00188C.pal
+018F4 unknown/0018F4.pal
+01918 unknown/001918.pal
+01938 unknown/001938.pal
+01950
+01A6A unknown/001A6A.pal
+01AA8
+
+# disassemble standard palette data
+01B3C unknown/001B3C.pal
+01BBC unknown/001BBC.pal
+01C3C unknown/001C3C.pal
+01CBC unknown/001CBC.pal
+01CDC unknown/001CDC.pal
+01D3C unknown/001D3C.pal
+01D9C unknown/001D9C.pal
+01E1C unknown/001E1C.pal
+01E7C unknown/001E7C.pal
+01EDC unknown/001EDC.pal
+01F3C unknown/001F3C.pal
+01F9C unknown/001F9C.pal
+0201C
+
+# disassemble misc stuff
+02066 unsorted/sinetable.dat
+022E6
+02382 unsorted/angletable.dat
+02484
+038E0 unknown/0038E0.pal
+039B2
+
+# disassemble art and map data
+18720 unknown/018720.nem
+18A56 unknown/018A56.eni
+18A62 unknown/018A62.unc
+1903A unknown/01903A.nem
+1A046 unknown/01A046.nem
+1C8EE artunc/sonic.bin
+2656E unknown/02656E.nem
+2680E unknown/02680E.nem
+269A4 unknown/0269A4.nem
+26C48 unknown/026C48.nem
+27400 unknown/027400.nem
+2744A unknown/02744A.nem
+27564 unknown/027564.nem
+27698 unknown/027698.nem
+27836 unknown/027836.nem
+27AC6 unknown/027AC6.nem
+27BF2 unknown/027BF2.nem
+27D20 unknown/027D20.nem
+27DBE unknown/027DBE.nem
+27E22 unknown/027E22.nem
+280B0 unknown/0280B0.nem
+2816E unknown/02816E.nem
+2827A unknown/02827A.nem
+28558 unknown/028558.nem
+28E6E unknown/028E6E.nem
+2905A unknown/02905A.nem
+29296 unknown/029296.nem
+294DA unknown/0294DA.nem
+2953C unknown/02953C.nem
+2961E unknown/02961E.nem
+297B6 unknown/0297B6.nem
+29D4A unknown/029D4A.nem
+29E56 unknown/029E56.nem
+29FC0 unknown/029FC0.nem
+2A022 unknown/02A022.nem
+2A104 unknown/02A104.nem
+2A56A unknown/02A56A.nem
+2AA58 unknown/02AA58.nem
+2B6D0 unknown/02B6D0.nem
+2B938 unknown/02B938.nem
+2BC04 unknown/02BC04.nem
+2C128 unknown/02C128.nem
+2C3B2 unknown/02C3B2.nem
+2C9D0 unknown/02C9D0.nem
+2CDB8 unknown/02CDB8.nem
+2D0B4 unknown/02D0B4.nem
+2D2FC unknown/02D2FC.nem
+2D912 unknown/02D912.nem
+2DA08 unknown/02DA08.nem
+2DB0E unknown/02DB0E.nem
+2DC02 unknown/02DC02.nem
+2E062 unknown/02E062.nem
+2E6C8 unknown/02E6C8.nem
+2E77C unknown/02E77C.nem
+2ECDC unknown/02ECDC.nem
+2EDDE unknown/02EDDE.nem
+2EEBA unknown/02EEBA.nem
+2F336 unknown/02F336.nem
+2F48E unknown/02F48E.nem
+2F5EA unknown/02F5EA.nem
+2F766 unknown/02F766.nem
+2F882 unknown/02F882.nem
+2F9B8 unknown/02F9B8.nem
+2FAF2 unknown/02FAF2.nem
+2FC4E
+
+# disassemble level stuff
+30000 map16/ghz.bin
+30C80 artnem/8x8ghz1.bin
+322E0 artnem/8x8ghz2.bin
+33688 map256/ghz.bin
+35908 map16/lz.bin
+35EF8 artnem/8x8lz.bin
+37194 map256/lz.bin
+38F24 map16/mz.bin
+39A14 artnem/8x8mz.bin
+3C258 map256/mz.bin
+46000 map16/slz.bin
+46D20 artnem/8x8slz.bin
+4A3A8 map256/slz.bin
+4CB38 map16/syz.bin
+4D8F8 artnem/8x8syz.bin
+50DD4 map256/syz.bin
+530F4 map16/sbz.bin
+53A04 artnem/8x8sbz.bin
+5548C map256/sbz.bin
+60000
+
+# disassemble demo data
+60000 unknown/060000.dat
+60864 unknown/060864.dat
+60BB0 unknown/060BB0.dat
+6168E
+
+# disassemble art and map data
+63080 unknown/063080.nem
+639B8 unknown/0639B8.eni
+63AEC unknown/063AEC.nem
+6477C unknown/06477C.eni
+64A7C unknown/064A7C.nem
+64F70 unknown/064F70.nem
+6505E unknown/06505E.nem
+6512E unknown/06512E.nem
+651FE unknown/0651FE.nem
+652DE unknown/0652DE.nem
+653D4 unknown/0653D4.nem
+65432 unknown/065432.nem
+654C4 unknown/0654C4.nem
+65586 unknown/065586.nem
+65654 unknown/065654.nem
+65720 unknown/065720.nem
+657E8 unknown/0657E8.nem
+658B2 unknown/0658B2.nem
+65982 unknown/065982.nem
+65B76 unknown/065B76.nem
+65BE6
+
+# disassemble misc data
+68000 unknown/068000.dat
+68100 unknown/068100.dat
+69100 unknown/069100.dat
+6A100
+
+# disassemble collision data
+6A100 unknown/col 06A100.dat
+6A290 unknown/col 06A290.dat
+6A358 unknown/col 06A358.dat
+6A658 unknown/col 06A658.dat
+6A84C unknown/col 06A84C.dat
+6A9DC unknown/col 06A9DC.dat
+6AB08
+
+# disassemble misc data
+6AB08 unknown/06AB08.dat
+6B018 unknown/06B018.dat
+6B218 unknown/06B218.dat
+6B618 unknown/06B618.dat
+6BA98 unknown/06BA98.dat
+6BD98 unknown/06BD98.dat
+6C398 unknown/06C398.dat
+6C998 unknown/06C998.dat
+6CC98
+
+# disassemble layout data
+6CD40 levels/ghz1.bin
+6CE32 levels/ghzbg1.bin
+6CE54
+6CE58 levels/ghz2.bin	
+6CF1A levels/ghzbg2.bin
+6CF3C
+6CF40 levels/ghz3.bin
+6D062 levels/ghzbg3.bin
+6D084
+6D08C levels/lz1.bin
+6D16E levels/lzbg.bin
+6D190
+6D194 levels/lz2.bin
+6D216
+6D21A levels/lz3.bin
+6D31C
+6D324 levels/mz1.bin
+6D3BC levels/mzbg1.bin
+6D47E levels/mz2.bin
+6D552 levels/mzbg2.bin
+6D614
+6D618 levels/mz3.bin
+6D6FA levels/mzbg3.bin
+6D7DC
+6D7E4 levels/slz1.bin
+6D926 levels/slzbg1.bin
+6D9A0 levels/slz2.bin
+6DAE2 levels/slz3.bin
+6DBE4
+6DBE8 levels/syz1.bin
+6DC9E levels/syzbg1.bin
+6DCD8
+6DCDC levels/syz2.bin
+6DDDA
+6DDDE levels/syz3.bin
+6DF30
+6DF38 levels/sbz1.bin
+6E13A levels/sbz2.bin
+6E33C levels/sbz2bg.bin
+6E340
+6E348 levels/unklayout.bin
+6E3CA
+
+# disassemble object lists
+70066 objpos/GHZ1.bin
+70546 objpos/GHZ2.bin
+70B10 objpos/GHZ3.bin
+71164 objpos/LZ1.bin
+7116A objpos/LZ2.bin
+71170 objpos/LZ3.bin
+71176 objpos/MZ1.bin
+714A6 objpos/MZ2.bin
+71AA6 objpos/MZ3.bin
+720CA objpos/SLZ1.bin
+72328 objpos/SLZ2.bin
+723D0 objpos/SLZ3.bin
+72460 objpos/SYZ1.bin
+728BC objpos/SYZ2.bin
+72D00 objpos/SYZ3.bin
+72D0C objpos/SBZ1.bin
+72D12 objpos/SBZ2.bin
+72D18 objpos/SBZ3.bin
+72D1E
+
+# disassemble sound data
+756D0 sound/z80.bin
+7732C sound/music81.bin
+77C68 sound/music82.bin
+78332 sound/music83.bin
+78966 sound/music84.bin
+79032 sound/music85.bin
+79758 sound/music86.bin
+79EA8 sound/music87.bin
+7A146 sound/music88.bin
+7A230 sound/music89.bin
+7A6A4 sound/music8A.bin
+7A8A4 sound/music8B.bin
+7AC54 sound/music8C.bin
+7AFE4 sound/music8D.bin
+7B2F0 sound/music8E.bin
+7B440 sound/music8F.bin
+7B5B8 sound/music91.bin
+7B7B4 sound/music92.bin
+7CF52
+7D01E sound/soundA0.bin
+7D034 sound/soundA1.bin
+7D068 sound/soundA2.bin
+7D088 sound/soundA3.bin
+7D0EC sound/soundA4.bin
+7D122 sound/soundA5.bin
+7D14E sound/soundA6.bin
+7D17E sound/soundA7.bin
+7D1C6 sound/soundA8.bin
+7D1E6 sound/soundA9.bin
+7D220 sound/soundAA.bin
+7D27A sound/soundAB.bin
+7D29A sound/soundAC.bin
+7D2CE sound/soundAD.bin
+7D2FC sound/soundAE.bin
+7D360 sound/soundAF.bin
+7D38E sound/soundB0.bin
+7D3BE sound/soundB1.bin
+7D3EE sound/soundB2.bin
+7D416 sound/soundB3.bin
+7D44C sound/soundB4.bin
+7D4C0 sound/soundB5.bin
+7D4EE sound/soundB6.bin
+7D50C sound/soundB7.bin
+7D548 sound/soundB8.bin
+7D566 sound/soundB9.bin
+7D5CA sound/soundBA.bin
+7D5F4 sound/soundBB.bin
+7D620 sound/soundBC.bin
+7D662 sound/soundBD.bin
+7D6B6 sound/soundBE.bin
+7D6F0 sound/soundBF.bin
+7D72E sound/soundC0.bin
+7D75C sound/soundC1.bin
+7D796 sound/soundC2.bin
+7D7C4 sound/soundC3.bin
+7D7EC sound/soundC4.bin
+7D814 sound/soundC5.bin
+7D87C sound/soundC6.bin
+7D8BE sound/soundC7.bin
+7D906 sound/soundC8.bin
+7D918 sound/soundC9.bin
+7D946 sound/soundCA.bin
+7D960 sound/soundCB.bin
+7D9AC sound/soundCC.bin
+7D9E6 sound/soundCD.bin
+7D9F4 sound/soundCE.bin
+7DA22 sound/soundCF.bin
+7DA5A sound/soundD0.bin
+7DA92 sound/soundD1.bin
+7DABE sound/soundD2.bin
+7DB0A
