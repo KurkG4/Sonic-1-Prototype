@@ -1,5 +1,5 @@
 # disassemble debug text
-005EA unsorted/debugtext.unc
+005EA artunc/debugtext.unc
 00B0A
 
 # disassemble palette cycle data
@@ -14,93 +14,94 @@
 01AA8
 
 # disassemble standard palette data
-01B3C unknown/001B3C.pal
-01BBC unknown/001BBC.pal
-01C3C unknown/001C3C.pal
-01CBC unknown/001CBC.pal
-01CDC unknown/001CDC.pal
-01D3C unknown/001D3C.pal
-01D9C unknown/001D9C.pal
-01E1C unknown/001E1C.pal
-01E7C unknown/001E7C.pal
-01EDC unknown/001EDC.pal
-01F3C unknown/001F3C.pal
-01F9C unknown/001F9C.pal
+01B3C palette/main.pal
+01BBC palette/main.pal
+01C3C palette/level select.pal
+01CBC palette/sonic.pal
+01CDC palette/GHZ/ghz.pal
+01D3C palette/LZ/lz.pal
+01D9C palette/GHZ/ghznight.pal
+01E1C palette/MZ/mz.pal
+01E7C palette/SLZ/slz.pal
+01EDC palette/SYZ/syz.pal
+01F3C palette/SBZ/sbz.pal
+01F9C palette/special stage.pal
 0201C
 
 # disassemble misc stuff
-02066 unsorted/sinetable.dat
+02066 misc/sinetable.dat
 022E6
-02382 unsorted/angletable.dat
+02382 misc/angletable.dat
 02484
 038E0 unknown/0038E0.pal
 039B2
 
 # disassemble art and map data
-18720 unknown/018720.nem
-18A56 unknown/018A56.eni
-18A62 unknown/018A62.unc
-1903A unknown/01903A.nem
-1A046 unknown/01A046.nem
-1C8EE artunc/sonic.bin
-2656E unknown/02656E.nem
-2680E unknown/02680E.nem
-269A4 unknown/0269A4.nem
-26C48 unknown/026C48.nem
-27400 unknown/027400.nem
-2744A unknown/02744A.nem
-27564 unknown/027564.nem
-27698 unknown/027698.nem
-27836 unknown/027836.nem
-27AC6 unknown/027AC6.nem
-27BF2 unknown/027BF2.nem
-27D20 unknown/027D20.nem
-27DBE unknown/027DBE.nem
-27E22 unknown/027E22.nem
-280B0 unknown/0280B0.nem
-2816E unknown/02816E.nem
-2827A unknown/02827A.nem
-28558 unknown/028558.nem
-28E6E unknown/028E6E.nem
-2905A unknown/02905A.nem
-29296 unknown/029296.nem
-294DA unknown/0294DA.nem
-2953C unknown/02953C.nem
-2961E unknown/02961E.nem
-297B6 unknown/0297B6.nem
-29D4A unknown/029D4A.nem
-29E56 unknown/029E56.nem
-29FC0 unknown/029FC0.nem
-2A022 unknown/02A022.nem
-2A104 unknown/02A104.nem
-2A56A unknown/02A56A.nem
-2AA58 unknown/02AA58.nem
-2B6D0 unknown/02B6D0.nem
-2B938 unknown/02B938.nem
-2BC04 unknown/02BC04.nem
-2C128 unknown/02C128.nem
-2C3B2 unknown/02C3B2.nem
-2C9D0 unknown/02C9D0.nem
-2CDB8 unknown/02CDB8.nem
-2D0B4 unknown/02D0B4.nem
-2D2FC unknown/02D2FC.nem
-2D912 unknown/02D912.nem
-2DA08 unknown/02DA08.nem
-2DB0E unknown/02DB0E.nem
-2DC02 unknown/02DC02.nem
-2E062 unknown/02E062.nem
-2E6C8 unknown/02E6C8.nem
-2E77C unknown/02E77C.nem
-2ECDC unknown/02ECDC.nem
-2EDDE unknown/02EDDE.nem
-2EEBA unknown/02EEBA.nem
-2F336 unknown/02F336.nem
-2F48E unknown/02F48E.nem
-2F5EA unknown/02F5EA.nem
-2F766 unknown/02F766.nem
-2F882 unknown/02F882.nem
-2F9B8 unknown/02F9B8.nem
-2FAF2 unknown/02FAF2.nem
+18720 artnem/sega art.nem
+18A56 unknown/18A56.eni
+18A62 unknown/18A62.unc
+1903A artnem/title.nem
+1A046 artnem/titlesonic.nem
+1C000
+1C8EE artunc/art sonic.unc
+2656E artnem/unusedsmoke.nem
+2680E artnem/shield.nem
+269A4 artnem/invicibility stars.nem
+26C48 artnem/unusedflash.nem
+27400 artnem/ghz flower stalk.nem
+2744A artnem/ghz swing.nem
+27564 artnem/ghz bridge.nem
+27698 artnem/ghz checkered ball.nem
+27836 artnem/spikes.nem
+27AC6 artnem/ghz rotating spikes.nem
+27BF2 artnem/ghz rock.nem
+27D20 artnem/ghz breakable wall.nem
+27DBE artnem/ghz solid wall.nem
+27E22 artnem/mz chandelier.nem
+280B0 artnem/mz button.nem
+2816E artnem/mz piston.nem
+2827A artnem/mz fire ball.nem
+28558 artnem/mz lava.nem
+28E6E artnem/mz pushable block.nem
+2905A artnem/slz seesaw.nem
+29296 artnem/slz fan.nem
+294DA artnem/slz platform.nem
+2953C artnem/slz girders.nem
+2961E artnem/slz spiked platforms.nem
+297B6 artnem/slz misc platforms.nem
+29D4A artnem/slz metal block.nem
+29E56 artnem/syz bumper.nem
+29FC0 artnem/syz small spiked ball.nem
+2A022 artnem/button.nem
+2A104 artnem/swinging spiked ball.nem
+2A56A artnem/crabmeat.nem
+2AA58 artnem/buzzkill.nem
+2B6D0 artnem/chopper.nem
+2B938 artnem/jaws.nem
+2BC04 artnem/roller.nem
+2C128 artnem/motobug.nem
+2C3B2 artnem/newtron.nem
+2C9D0 artnem/yadrin.nem
+2CDB8 artnem/batbrain.nem
+2D0B4 artnem/splats.nem
+2D2FC artnem/titlecards.nem
+2D912 artnem/hud main.nem
+2DA08 artnem/hud lives.nem
+2DB0E artnem/ring.nem
+2DC02 artnem/monitor.nem
+2E062 artnem/explosion.nem
+2E6C8 artnem/score points.nem
+2E77C artnem/game over.nem
+2ECDC artnem/spring v.nem
+2EDDE artnem/spring h.nem
+2EEBA artnem/end sign post.nem
+2F336 artnem/pocky.nem
+2F48E artnem/cucky.nem
+2F5EA artnem/pecky.nem
+2F766 artnem/rocky.nem
+2F882 artnem/picky.nem
+2F9B8 artnem/flicky.nem
+2FAF2 artnem/ricky.nem
 2FC4E
 
 # disassemble level stuff
@@ -132,26 +133,26 @@
 6168E
 
 # disassemble art and map data
-63080 unknown/063080.nem
-639B8 unknown/0639B8.eni
-63AEC unknown/063AEC.nem
-6477C unknown/06477C.eni
-64A7C unknown/064A7C.nem
-64F70 unknown/064F70.nem
-6505E unknown/06505E.nem
-6512E unknown/06512E.nem
-651FE unknown/0651FE.nem
-652DE unknown/0652DE.nem
-653D4 unknown/0653D4.nem
-65432 unknown/065432.nem
-654C4 unknown/0654C4.nem
-65586 unknown/065586.nem
-65654 unknown/065654.nem
-65720 unknown/065720.nem
-657E8 unknown/0657E8.nem
-658B2 unknown/0658B2.nem
-65982 unknown/065982.nem
-65B76 unknown/065B76.nem
+63080 artnem/ss generic blocks.nem
+639B8 unknown/639B8.eni
+63AEC artnem/ss bg animals.nem
+6477C unknown/6477C.eni
+64A7C artnem/ss bg misc.nem
+64F70 artnem/ss goal.nem
+6505E artnem/ss r.nem
+6512E artnem/ss skull.nem
+651FE artnem/ss u.nem
+652DE artnem/ss 1up.nem
+653D4 artnem/ss stars.nem
+65432 artnem/ss red white.nem
+654C4 artnem/ss zone1.nem
+65586 artnem/ss zone2.nem
+65654 artnem/ss zone3.nem
+65720 artnem/ss zone4.nem
+657E8 artnem/ss zone5.nem
+658B2 artnem/ss zone6.nem
+65982 artnem/ss up down.nem
+65B76 artnem/ss emerald.nem
 65BE6
 
 # disassemble misc data
